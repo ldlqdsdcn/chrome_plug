@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "这是我的第一个chrom插件",
+  "description": "这个插件允许用户改变当前页的背景颜色.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "rocket.png",
+    "default_popup": "popup.html",
+    "default_title":"改变背景颜色"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
