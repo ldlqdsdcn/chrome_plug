@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html> <head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1.0"><meta http-equiv=Content-Type content="text/html; charset=UTF-8"><title>popup</title><link type=text/css href=skin/popup/smallnumber.css rel=stylesheet><link type=text/css href=skin/popup/bignumber.css rel=stylesheet><script type=text/javascript src=jquery-ui/1.7.2/jquery.min.js></script><script type=text/javascript src=skin/popup/smallnumber.js></script><script type=text/javascript src=skin/popup/bignumber.js></script><script type=text/javascript src=popup.js></script><script type=text/javascript src=notification.js></script><style type=text/css>
+    body {
+      width:290px;/*330*/
+      height: 378px;/*436*/
+      margin: 0px;
+      /*overflow-x:hidden;*/
+      background-image: url("skin/popup/plus-back.png");
+      background-repeat:no-repeat;
+      background-position: 0px 82px;
+    }
+    .title-left{
+      margin: 8px;
+      float: left;
+      line-height: 82px;
+      height: 59px;  
+      width:150px;  
+      background-image:url("skin/popup/kaiguan.png");   
+      background-repeat:no-repeat;
+      background-position:0px; 
+    }
+    .title-left #title-name{
+      position:relative;
+      width:100%;
+      height:100%;
+      background-image:url("skin/popup/title.png");   
+      background-repeat:no-repeat;
+      background-position:30px; 
+    }
+
+    .title-right-enabled{
+      margin: 8px;
+      float: right;
+      line-height: 82px;
+      height: 59px;
+      width:59px;
+    }
+    .title-right-enabled input[type=checkbox] {
+      visibility: hidden;
+    }
+    .title-right-enabled label{
+      display: block;
+      width: 59px;
+      height: 59px;
+      border-radius: 50%;
+      /*transition: all 1s ease;*/
+      cursor: pointer;
+      position: absolute;
+      top:19px;
+      right:14px;
+      background-image:url("skin/popup/close.png");
+      background-repeat:no-repeat;
+      background-position:0px; 
+    }
+  .title-right-enabled input[type=checkbox]:checked + label {
+      background-image:url("skin/popup/open.png");
+      background-repeat:no-repeat;
+      background-position:0px; 
+    }
+
+    .main{
+      position:relative;
+      margin:0;
+      top: 83px;
+      left: 0px;
+      height: 240px;
+    }
+    .main #title{
+      margin:8px;
+      width:105px;
+      height: 51px;
+      background-image: url("skin/popup/gl.png");
+      background-repeat:no-repeat;
+      background-position: -20px -15px;
+    }
+    .main #main-left{
+      position:absolute;
+      float: left;
+      height:100px;
+      width: 50%;
+    }
+    .main #main-left-current{
+      position :absolute;
+      height:40px;
+      width: 100%;
+      background-image:url("skin/popup/dangqian.png");
+      background-repeat:no-repeat;
+      background-position: 10px 0px;
+    }
+    .main #main-right{
+      position:absolute;
+      height:100px;
+      right: 0px;
+      width: 50%;
+    }
+    .main #right-js-num{
+      position :relative;
+      
+      top:21%;
+    }
+    .main #main-right-current{
+      position :absolute;
+      top:65px;
+      height:40px;
+      width: 100%;
+      background-image:url("skin/popup/leiji.png");
+      background-repeat:no-repeat;
+      background-position: 10px 0px;
+    }
+    .main #animation{
+      position:relative;
+      height: 187px;
+      margin:0;
+      background-image: url("skin/popup/curve.png");
+      background-position: -135px 50px;
+      background-repeat:no-repeat;
+    }
+    .footer{
+      position:relative;
+      margin:0;
+      top: 89px;
+      left: 0px;
+      height: 54px;
+      background-image: url("skin/popup/fenge.png");
+      background-repeat:no-repeat;
+      background-position: 50%;
+
+    }
+    .footer #footer-left-OptionsButton{
+      position:relative;
+      float: left;
+      cursor:pointer;
+      width: 50%;
+      height:100%;
+      line-height: 51px;
+    }
+    .footer #footer-left-OptionsButton img{
+      position:absolute; 
+      top: 10px;
+      left: 40px;
+    }
+    .footer #footer-right{ 
+      position:relative; 
+      float: right;
+      cursor:pointer;
+      width: 50%; /*height:54px;*/ 
+      line-height: 51px;
+    }
+    .footer #footer-right img{
+      position:relative; 
+      top: 7px;
+    }
+    a:focus{
+      outline: none;
+    }
+  </style></head>
+<body>
+<div id=notification style="display: none"><h1 id=title></h1>
+    <p id=message></p></div>
+<div class=title-left>
+    <div id=title-name></div>
+</div>
+<div class=title-right-enabled><input id=enabled type=checkbox checked> <label for=enabled><span
+        class=i18n_enabled_for_site></span></label></div>
+<div class=main>
+    <div id=title></div>
+    <div id=main-left>
+        <div class="num-skin JS-num-big-set" align=center><span class=JS-num-big-val id=statspage></span></div>
+        <div id=main-left-current></div>
+    </div>
+    <div id=main-right>
+        <div class="num-skin JS-num-set" align=center id=right-js-num><span class=JS-num-val id=statsTotal></span></div>
+        <div id=main-right-current></div>
+    </div>
+    <div id=animation></div>
+</div>
+<div class=footer>
+    <div id=footer-left-OptionsButton align=center><img src=skin/popup/settings.png></div>
+    <div id=footer-right align=center><a id=footer-video href=videotab.html target="_blank"><img
+            src=skin/popup/videonav.png></a></div>
+    <li id="sniffer" class="menu-item" role="button">
+        <table id="sniffer" class="mylist">
+
+            <th id="mediaurl" data-column="url" colspan="3"><font color="#C0C0C0">视频嗅探</font></th>
+
+            <tbody id="medialist">
+            <tr class="loading">
+                <td colspan="3">
+                    <font color="#C0C0C0">暂无媒体资源</font></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </li>
+</div>
+
+
+</body>
+</html>

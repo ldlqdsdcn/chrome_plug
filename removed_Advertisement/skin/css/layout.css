@@ -1,0 +1,29 @@
+body{font-family:"Microsoft YaHei";font-size:14px;margin:0;}
+#container{margin:0 auto;width:900px;}
+#header{height:100px;background:#fff;margin-bottom:5px;}
+#mainContent{height:1200px;margin-bottom:5px;}
+#sidebar{float:left;width:200px;height:1200px;background:#313955;}
+#content{float:right;width:695px;height:1200px;background:#fff;}
+#footer{height:60px;background:#fff;}
+#header{background-image:url("../settings/logo.png");background-repeat:no-repeat;background-position:8% 50%;}
+.segmentation div:after{content:'';width:2000px;height:2px;position:absolute;top:103px;left:0;background-color:#2387ef;}
+.settings-title{position:relative;width:auto;height:100px;background-image:url("../settings/settings-title.png");background-repeat:no-repeat;background-position:20% 0;}
+.sidenav .current{box-shadow:inset 5px 0px #2387ef;background-color:#304165;}
+.sidenav .last{margin-bottom:0;}
+.settings-info{margin-top:20px;margin-left:20px;box-shadow:inset 5px 0px #2387ef;}
+.settings-info1{margin-top:10px;margin-left:35px;}
+.settings-text{margin-left:15px;}
+.settings-tiptext{color:#a7a7a7;font-size:10px;margin-left:15px;}
+.removeButton,.buttons,.addButton{cursor:pointer;border:0;width:102px;height:35px;background-image:url("../settings/buttons.png");background-repeat:no-repeat;background-position:-1px 0;}
+.removeButton:hover,.addButton:hover,.buttons:hover{background-image:url("../settings/buttons.png");background-repeat:no-repeat;background-position:-105px 0;}
+.removeButton:active,.addButton:active,.buttons:active{background-image:url("../settings/buttons.png");background-repeat:no-repeat;background-position:-209px 0;}
+input[type=checkbox]{visibility:hidden; }
+.checkboxOne{width:auto;height:20px;background-image:url("../settings/no.png");background-repeat:no-repeat;background-position:0 4px;margin:15px;margin-left:35px;position:relative;border-radius:3px; }
+.checkboxOne label{display:block;width:20px;height:20px;border-radius:50%; cursor:pointer;position:absolute;top:4px;}
+.checkboxOne input[type=checkbox]:checked +label{background-image:url("../settings/yes.png");background-repeat:no-repeat;}
+input[type="text"]{border:1px solid transparent;border-color:#2387ef;font-size:24px;}
+.myedit{position:relative;top:3px;width:44%;margin:15px;}
+.settings-list select{border:1px solid transparent;border-color:#2387ef;margin:15px;margin-left:35px;width:42%;}
+.settings-add{margin:15px;margin-left:20px;}
+#subscriptionTemplate,#addSubscriptionContainer,#customSubscriptionContainer{display:none;}
+.addContent,.CustomContent,.addButtonContent{position:relative;margin:15px;margin-left:35px;}

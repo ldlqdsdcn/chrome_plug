@@ -1,0 +1,11 @@
+.sidenav{width:200px;padding:0 0 0 0;margin-top:20px;position:fixed;list-style:none;}
+.sidenav li{height:60px;line-height:60px; width:100%;color:white;text-align:center;opacity:0.4;}
+.sidenav .current{opacity:1}
+.sidenav .i0{background-image:url("../settings/liebiao.png");background-repeat:no-repeat;background-position:20% 50%;}
+.sidenav .i1{background-image:url("../settings/zidingyi.png");background-repeat:no-repeat;background-position:20% 50%;}
+.sidenav .i2{background-image:url("../settings/paichu.png");background-repeat:no-repeat;background-position:20% 50%;}
+.sidenav .i3{background-image:url("../settings/shezhi.png");background-repeat:no-repeat;background-position:20% 50%;}
+.sidenav a:after{}
+.sidenav .on:after{}
+.sidenav .on{}
+.sidenav .last{}

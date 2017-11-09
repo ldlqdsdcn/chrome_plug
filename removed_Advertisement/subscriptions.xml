@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<subscriptions>
+  <subscription title="ChinaList+EasyList"
+                specialization="默认规则"
+                url="http://tools.17xiuwang.com/ChinaList-EasyList.html"
+                homepage="http://www.adkiller001.com"
+                prefixes="zh"
+                author="HuoLeifeng"/>
+  <subscription title="EasyList"
+                specialization="适合只访问国外网站"
+                url="https://easylist-downloads.adblockplus.org/easylist.txt"
+                homepage="hhttps://easylist.adblockplus.org/"
+                prefixes="en"
+                author="tomasko126"/>
+  </subscriptions>
